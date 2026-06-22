@@ -282,3 +282,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+// ---- Handle Bfcache (Back button stuck animation fix) ----
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    if (typeof gsap !== 'undefined') {
+      // Hide the overlays immediately
+      gsap.set('.p-op__overlay', { yPercent: -100 });
+      const opEl = document.querySelector('.p-op');
+      if (opEl) {
+        opEl.style.pointerEvents = 'none';
+      }
+    }
+  }
+});
