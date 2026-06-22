@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "top": "Top",
+    "works": "Works",
+    "about": "About",
+    "company": "Company",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Ignite Imagination Through Motion"
+  },
+  "lineup": {
+    "title": "Line Up",
+    "cap": "Featured Works",
+    "more": "More"
+  },
+  "about": {
+    "catch": "Animation × Creation\n= Ascooo",
+    "text": "<strong>Ascooo</strong> is dedicated to bringing exceptional animation and visual content to audiences worldwide. We believe every work carries the soul of its creators, and our mission is to connect these stories with the hearts of many.",
+    "note": "※ The brand name \"Ascooo\" is born from the fusion of \"Animation\" and \"Creation,\" symbolizing the infinite possibilities of anime and creativity."
+  },
+  "purpose": {
+    "title": "Purpose",
+    "text1": "Ascooo is a company specializing in the distribution of animation and visual content. Through innovative distribution strategies and creative marketing approaches, we build bridges connecting audiences, creators, and partners.",
+    "text2": "From nationwide theatrical releases to exclusive screening events, we leverage optimal distribution strategies to fully showcase the value and charm of each work, delivering extraordinary visual experiences to as many fans as possible."
+  },
+  "company": {
+    "title": "Company",
+    "name_label": "Company Name",
+    "name_value": "Ascooo Inc.",
+    "capital_label": "Capital",
+    "capital_value": "—",
+    "representatives_label": "Representatives",
+    "representative1_title": "—",
+    "representative1_name": "—",
+    "location_label": "Location",
+    "location_value": "—",
+    "business_label": "Business",
+    "business_value": "Distribution and promotion of animation and visual content",
+    "phone_label": "Phone",
+    "phone_value": "+886-2-1234-5678",
+    "fax_label": "Fax",
+    "fax_value": "+886-2-1234-5679",
+    "map_label": "Map",
+    "map_value": "View on Google Maps",
+    "more": "More"
+  },
+  "news": {
+    "title": "News",
+    "cap": "Latest Updates",
+    "more": "More"
+  },
+  "footer": {
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 Ascooo. All rights reserved."
+  },
+  "works_page": {
+    "title": "Works",
+    "cap": "Our Collection"
+  },
+  "about_page": {
+    "title": "About",
+    "cap": "About Us"
+  },
+  "company_page": {
+    "title": "Company",
+    "cap": "Company Profile"
+  },
+  "news_page": {
+    "title": "News",
+    "cap": "Latest Updates"
+  },
+  "contact_page": {
+    "title": "Contact",
+    "cap": "Get in Touch",
+    "name_label": "Name",
+    "email_label": "Email",
+    "subject_label": "Subject",
+    "message_label": "Message",
+    "submit": "Submit"
+  },
+  "privacy_page": {
+    "title": "Privacy Policy",
+    "cap": "Privacy Policy"
+  }
+}

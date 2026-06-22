@@ -1,0 +1,18 @@
+/* ============================================
+   ASCOOO — News Page Styles
+   ============================================ */
+
+.p-news-page {
+  padding-top: 140px;
+  padding-bottom: var(--spacing-section);
+}
+
+.p-news-page__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-container);
+}
+
+.p-news-page__list {
+  margin-top: 48px;
+}

@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "top": "首頁",
+    "works": "作品",
+    "about": "關於",
+    "company": "公司",
+    "news": "最新消息",
+    "contact": "聯絡我們"
+  },
+  "hero": {
+    "tagline": "以影像點燃想像"
+  },
+  "lineup": {
+    "title": "Line Up",
+    "cap": "作品一覽",
+    "more": "More"
+  },
+  "about": {
+    "catch": "Animation × Creation\n= Ascooo",
+    "text": "<strong>Ascooo</strong> 致力於將優質動畫與影視內容帶給觀眾。我們深信每一部作品都承載著創作者的靈魂，而我們的使命就是讓這些故事觸及更多人心。",
+    "note": "※ Ascooo 品牌名稱源自「Animation」與「Creation」的結合，象徵動畫與創意的無限可能。"
+  },
+  "purpose": {
+    "title": "Purpose",
+    "text1": "Ascooo 是一家專注於動畫與影視內容發行的公司。我們以優質的發行策略與創新的宣傳手法，為觀眾、創作者及合作夥伴搭建一座連結的橋樑。",
+    "text2": "從全國性的大規模上映到特別放映會，我們運用最佳的發行策略，充分展現每部作品的價值與魅力，為更多觀眾帶來更精彩的影視體驗。"
+  },
+  "company": {
+    "title": "Company",
+    "name_label": "公司名稱",
+    "name_value": "Ascooo Inc.",
+    "capital_label": "資本額",
+    "capital_value": "—",
+    "representatives_label": "代表人",
+    "representative1_title": "—",
+    "representative1_name": "—",
+    "location_label": "所在地",
+    "location_value": "—",
+    "business_label": "事業內容",
+    "business_value": "動畫與影視內容之發行、宣傳",
+    "phone_label": "電話",
+    "phone_value": "02-1234-5678",
+    "fax_label": "傳真",
+    "fax_value": "02-1234-5679",
+    "map_label": "地圖",
+    "map_value": "查看 Google 地圖",
+    "more": "More"
+  },
+  "news": {
+    "title": "News",
+    "cap": "最新消息",
+    "more": "More"
+  },
+  "footer": {
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 Ascooo. All rights reserved."
+  },
+  "works_page": {
+    "title": "Works",
+    "cap": "作品一覽"
+  },
+  "about_page": {
+    "title": "About",
+    "cap": "關於我們"
+  },
+  "company_page": {
+    "title": "Company",
+    "cap": "公司資訊"
+  },
+  "news_page": {
+    "title": "News",
+    "cap": "最新消息"
+  },
+  "contact_page": {
+    "title": "Contact",
+    "cap": "聯絡我們",
+    "name_label": "姓名",
+    "email_label": "Email",
+    "subject_label": "主旨",
+    "message_label": "訊息",
+    "submit": "送出"
+  },
+  "privacy_page": {
+    "title": "Privacy Policy",
+    "cap": "隱私權政策"
+  }
+}

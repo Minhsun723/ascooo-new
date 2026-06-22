@@ -1,0 +1,19 @@
+/* ============================================
+   ASCOOO — Contact Page Styles
+   ============================================ */
+
+.p-contact {
+  padding-top: 140px;
+  padding-bottom: var(--spacing-section);
+}
+
+.p-contact__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-container);
+}
+
+.p-contact__form {
+  max-width: 600px;
+  margin: 48px auto 0;
+}

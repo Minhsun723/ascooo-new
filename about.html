@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Ascooo Inc.</title>
+  <meta name="description" content="關於 Ascooo — Animation × Creation 的故事。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/about.css">
+  <script>document.documentElement.classList.add('i18n-loading');</script>
+</head>
+<body data-area="about">
+<div class="l-wrap">
+
+    <!-- ======== Opening Animation ======== -->
+    <div class="p-op" aria-hidden="true">
+      <div class="p-op__logo"><img src="/assets/img/logo_light.svg" alt="Ascooo"></div>
+      <div class="p-op__overlay --1"></div>
+      <div class="p-op__overlay --2"></div>
+      <div class="p-op__overlay --3"></div>
+      <div class="p-op__overlay --4"></div>
+      <div class="p-op__overlay --5"></div>
+    </div>
+  <div class="l-wrap__container">
+
+    <!-- Header -->
+    <header class="l-header is-scrolled" id="header">
+      <div class="l-header__brand">
+        <a href="/" class="l-header__brand-link" aria-label="Ascooo Home">
+          <img src="/assets/img/logo_dark.svg" alt="Ascooo">
+        </a>
+      </div>
+      <nav class="l-header__nav is-pc">
+        <ul class="l-header__nav-list">
+          <li><a href="/" class="l-header__nav-link" data-i18n="nav.top">首頁</a></li>
+          <li><a href="/#lineup" class="l-header__nav-link" data-i18n="nav.works">作品</a></li>
+          <li><a href="/about.html" class="l-header__nav-link" data-i18n="nav.about">關於</a></li>
+          <li><a href="/company.html" class="l-header__nav-link" data-i18n="nav.company">公司</a></li>
+          <li><a href="/news.html" class="l-header__nav-link" data-i18n="nav.news">最新消息</a></li>
+        </ul>
+      </nav>
+    
+      <div class="l-header__actions">
+        <div class="l-lang l-lang--dropdown">
+          <button class="l-lang__toggle" aria-label="Language">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </button>
+          <div class="l-lang__menu">
+            <button class="l-lang__btn is-active" data-lang-btn="zh-TW">繁體中文</button>
+            <button class="l-lang__btn" data-lang-btn="en">English</button>
+          </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- Nav Overlay -->
+    <nav class="l-nav" data-lenis-prevent>
+      <div class="l-nav__bg"></div>
+      <div class="l-nav__container">
+        <div class="l-nav__brand"><a href="/" class="l-nav__brand-link" aria-label="Ascooo Home">
+            <img src="/assets/img/logo_light.svg" alt="Ascooo">
+          </a></div>
+        <div class="l-nav__content">
+          <ul class="l-nav__list">
+            <li class="l-nav__list-item"><a href="/" class="l-nav__link" data-menu-close><span class="l-nav__link-text" data-i18n="nav.top">首頁</span></a></li>
+            <li class="l-nav__list-item"><a href="/company.html" class="l-nav__link" data-menu-close><span class="l-nav__link-text" data-i18n="nav.company">公司</span></a></li>
+            <li class="l-nav__list-item"><a href="/works.html" class="l-nav__link" data-menu-close><span class="l-nav__link-text" data-i18n="nav.works">作品</span></a></li>
+            <li class="l-nav__list-item"><a href="/about.html" class="l-nav__link" data-menu-close><span class="l-nav__link-text" data-i18n="nav.about">關於</span></a></li>
+            <li class="l-nav__list-item"><a href="/news.html" class="l-nav__link" data-menu-close><span class="l-nav__link-text" data-i18n="nav.news">最新消息</span></a></li>
+            <li class="l-nav__list-item"><a href="/contact.html" class="l-nav__link" data-menu-close><span class="l-nav__link-text" data-i18n="nav.contact">聯絡我們</span></a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+
+    <button class="l-menu" type="button" data-menu aria-label="Toggle Menu">
+      <span class="l-menu__content">
+        <span class="l-menu__line --open"><span class="l-menu__line-bar">MENU</span><span class="l-menu__line-bar"></span></span>
+        <span class="l-menu__line --close"><span class="l-menu__line-bar"></span><span class="l-menu__line-bar"></span></span>
+      </span>
+    </button>
+
+    <!-- Main -->
+    <main class="l-main">
+      <section class="p-about-page">
+        <div class="p-about-page__container">
+          <div class="c-section-title">
+            <span class="c-section-title__bg" aria-hidden="true" data-i18n="about_page.title">About</span>
+            <h1 class="c-section-title__text" data-i18n="about_page.title">About</h1>
+            <p class="c-section-title__cap" data-i18n="about_page.cap">關於我們</p>
+          </div>
+
+          <div class="p-about-page__hero js-reveal-scale">
+            <div class="p-about-page__hero-bg" aria-hidden="true">Animation × Creation<br>= Ascooo</div>
+            <h2 class="p-about-page__hero-text">Animation × Creation<br>= Ascooo</h2>
+          </div>
+
+          <div class="p-about-page__body">
+            <div class="p-about-page__section js-reveal">
+              <h3 class="p-about-page__section-title">我們的故事</h3>
+              <p class="p-about-page__text" data-i18n="about.text">
+                <strong>Ascooo</strong> 致力於將優質動畫與影視內容帶給觀眾。我們深信每一部作品都承載著創作者的靈魂，而我們的使命就是讓這些故事觸及更多人心。
+              </p>
+            </div>
+
+            <div class="p-about-page__section js-reveal">
+              <h3 class="p-about-page__section-title">我們的理念</h3>
+              <p class="p-about-page__text" data-i18n="purpose.text1">
+                Ascooo 是一家專注於動畫與影視內容發行的公司。我們以優質的發行策略與創新的宣傳手法，為觀眾、創作者及合作夥伴搭建一座連結的橋樑。
+              </p>
+              <p class="p-about-page__text" data-i18n="purpose.text2">
+                從全國性的大規模上映到特別放映會，我們運用最佳的發行策略，充分展現每部作品的價值與魅力，為更多觀眾帶來更精彩的影視體驗。
+              </p>
+            </div>
+
+            <div class="p-about-page__section js-reveal">
+              <h3 class="p-about-page__section-title">公司資訊</h3>
+              <div class="c-data-row">
+                <div class="c-data-row__header" data-i18n="company.name_label">公司名稱</div>
+                <div class="c-data-row__content" data-i18n="company.name_value">Ascooo Inc.</div>
+              </div>
+              <div class="c-data-row">
+                <div class="c-data-row__header" data-i18n="company.business_label">事業內容</div>
+                <div class="c-data-row__content" data-i18n="company.business_value">動畫與影視內容之發行、宣傳</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="l-footer">
+      <div class="l-footer__container">
+        <div class="l-footer__support">
+          <ul class="l-footer__support-list">
+            <li><a href="/contact.html" class="l-footer__support-link" data-i18n="footer.contact">Contact</a></li>
+            <li><a href="/privacy.html" class="l-footer__support-link" data-i18n="footer.privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="l-footer__bottom">
+          <div class="l-footer__legal">
+            <p class="l-footer__legal-text" data-i18n="footer.copyright">©Ascooo Inc. All rights reserved.</p>
+          </div>
+            <div class="l-footer__logo">
+              <a href="/" aria-label="Ascooo Home">
+                <img src="/assets/img/logo_dark.svg" alt="Ascooo">
+              </a>
+            </div>
+          <div class="l-footer__sns">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <svg viewBox="0 0 1200 1227" fill="currentColor"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+              <svg viewBox="0 0 192 192" fill="currentColor"><path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="/assets/js/i18n.js"></script>
+<script src="/assets/js/animations.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
