@@ -37,7 +37,7 @@
     "location_label": "Location",
     "location_value": "—",
     "business_label": "Business",
-    "business_value": "Distribution and promotion of animation and visual content",
+    "business_value": "—",
     "phone_label": "Phone",
     "phone_value": "+886-2-1234-5678",
     "fax_label": "Fax",
@@ -84,5 +84,10 @@
   "privacy_page": {
     "title": "Privacy Policy",
     "cap": "Privacy Policy"
+  },
+  "not_found": {
+    "title": "404",
+    "cap": "Page Not Found",
+    "btn": "Back to Home"
   }
 }

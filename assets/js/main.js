@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (opEl && typeof gsap !== 'undefined') {
     const isFirstVisit = !sessionStorage.getItem('ascooo-visited');
     
+    // Hide hero slide initially to prevent flashing before entrance animation finishes
+    if (document.querySelector('.p-hero__slide')) {
+      gsap.set('.p-hero__slide', { opacity: 0, y: 40, filter: 'blur(8px)' });
+    }
+
     // Page Entrance Animation
     const entranceTl = gsap.timeline({
       onComplete: () => {
@@ -16,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         opEl.style.pointerEvents = 'none'; // Ensure clicks pass through
         // If there's a hero slide, animate it in
         if (document.querySelector('.p-hero__slide')) {
-          gsap.fromTo('.p-hero__slide',
-            { opacity: 0, y: 40, filter: 'blur(8px)' },
+          gsap.to('.p-hero__slide',
             { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1, ease: 'power3.out' }
           );
         }

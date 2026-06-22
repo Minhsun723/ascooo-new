@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <link rel="icon" href="/assets/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News — Ascooo</title>
-  <meta name="description" content="Ascooo 最新消息與公告。">
+  <title>404 — Ascooo</title>
+  <meta name="description" content="找不到頁面。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,11 +16,15 @@
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/news.css">
+  <script>
+    if (window.location.pathname === '/404.html' || window.location.pathname === '/404' || window.location.pathname.endsWith('/404.html')) {
+      window.location.replace('/');
+    }
+  </script>
   <script>document.documentElement.classList.add('i18n-loading');</script>
 </head>
 
-<body data-area="news">
+<body data-area="404">
   <div class="l-wrap">
 
     <!-- ======== Opening Animation ======== -->
@@ -107,54 +111,16 @@
       </button>
 
       <!-- Main -->
-      <main class="l-main">
-        <section class="p-news-page">
-          <div class="p-news-page__container">
-            <div class="c-section-title">
-              <span class="c-section-title__bg" aria-hidden="true" data-i18n="news_page.title">News</span>
-              <h1 class="c-section-title__text" data-i18n="news_page.title">News</h1>
-              <p class="c-section-title__cap" data-i18n="news_page.cap">最新消息</p>
+      <main class="l-main" style="display: flex; align-items: center; justify-content: center; min-height: 80vh;">
+        <section class="p-404" style="text-align: center; width: 100%;">
+          <div class="p-404__container" style="max-width: var(--container-width); margin: 0 auto; padding: 0 var(--container-padding);">
+            <div class="c-section-title" style="margin-bottom: 24px; padding-top: 0;">
+              <span class="c-section-title__bg" aria-hidden="true" style="top: 50%; transform: translateY(-50%); font-size: clamp(100px, 20vw, 250px);">404</span>
+              <h1 class="c-section-title__text" data-i18n="not_found.title" style="font-size: clamp(60px, 12vw, 120px); letter-spacing: -0.05em; line-height: 1;">404</h1>
+              <p class="c-section-title__cap" data-i18n="not_found.cap" style="margin-top: 1rem; font-size: 1.25rem;">找不到頁面</p>
             </div>
-
-            <div class="p-news-page__list">
-              <ul>
-                <li>
-                  <a href="/news/1.html" class="c-news-item js-reveal">
-                    <div class="c-news-item__date">
-                      <div class="c-news-item__date-year">2026</div>
-                      <div class="c-news-item__date-day">06.01</div>
-                    </div>
-                    <div class="c-news-item__title">網站正式上線</div>
-                  </a>
-                </li>
-                <li>
-                  <a href="/news/2.html" class="c-news-item js-reveal">
-                    <div class="c-news-item__date">
-                      <div class="c-news-item__date-year">2026</div>
-                      <div class="c-news-item__date-day">05.15</div>
-                    </div>
-                    <div class="c-news-item__title">Ascooo 公司成立消息</div>
-                  </a>
-                </li>
-                <li>
-                  <a href="/news/3.html" class="c-news-item js-reveal">
-                    <div class="c-news-item__date">
-                      <div class="c-news-item__date-year">2026</div>
-                      <div class="c-news-item__date-day">04.20</div>
-                    </div>
-                    <div class="c-news-item__title">首部合作作品正式公告</div>
-                  </a>
-                </li>
-                <li>
-                  <a href="/news/4.html" class="c-news-item js-reveal">
-                    <div class="c-news-item__date">
-                      <div class="c-news-item__date-year">2026</div>
-                      <div class="c-news-item__date-day">03.10</div>
-                    </div>
-                    <div class="c-news-item__title">品牌形象識別系統發布</div>
-                  </a>
-                </li>
-              </ul>
+            <div style="margin-top: 3rem;">
+              <a href="/" class="c-form-submit" data-i18n="not_found.btn" style="text-decoration: none;">回到首頁</a>
             </div>
           </div>
         </section>

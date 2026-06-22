@@ -702,6 +702,7 @@
 /* ---- Main content spacing ---- */
 .l-main {
   position: relative;
+  flex-grow: 1;
 }
 
 @media (max-width: 1024px) {

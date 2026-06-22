@@ -4,7 +4,28 @@
  */
 
 const I18n = (() => {
+  // Check URL parameter first
+  const pathname = window.location.pathname;
+  const isEnPath = pathname.startsWith('/en/') || pathname === '/en';
+  
+  if (isEnPath) {
+    localStorage.setItem('ascooo-lang', 'en');
+  } else {
+    // To allow switching back to Chinese via URL if needed, though they only said /en
+    // We only force 'en' if we see /en in the URL.
+  }
+  
   let currentLang = localStorage.getItem('ascooo-lang') || 'zh-TW';
+  
+  // Ensure URL reflects current language on load
+  if (currentLang === 'en' && !isEnPath) {
+    const newPath = '/en' + (pathname.startsWith('/') ? pathname : '/' + pathname);
+    window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
+  } else if (currentLang === 'zh-TW' && isEnPath) {
+    const newPath = pathname.replace(/^\/en(\/|$)/, '/');
+    window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
+  }
+
   let translations = {};
 
   async function loadLang(lang) {
@@ -83,6 +104,18 @@ const I18n = (() => {
     currentLang = lang;
     localStorage.setItem('ascooo-lang', lang);
     applyTranslations();
+    
+    // Update URL
+    const pathname = window.location.pathname;
+    const isEnPath = pathname.startsWith('/en/') || pathname === '/en';
+    
+    if (lang === 'en' && !isEnPath) {
+      const newPath = '/en' + (pathname.startsWith('/') ? pathname : '/' + pathname);
+      window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
+    } else if (lang === 'zh-TW' && isEnPath) {
+      const newPath = pathname.replace(/^\/en(\/|$)/, '/');
+      window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
+    }
   }
 
   function getLang() {

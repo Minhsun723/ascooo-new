@@ -37,7 +37,7 @@
     "location_label": "所在地",
     "location_value": "—",
     "business_label": "事業內容",
-    "business_value": "動畫與影視內容之發行、宣傳",
+    "business_value": "—",
     "phone_label": "電話",
     "phone_value": "02-1234-5678",
     "fax_label": "傳真",
@@ -84,5 +84,10 @@
   "privacy_page": {
     "title": "Privacy Policy",
     "cap": "隱私權政策"
+  },
+  "not_found": {
+    "title": "404",
+    "cap": "找不到頁面",
+    "btn": "回到首頁"
   }
 }
