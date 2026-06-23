@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/assets/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ascooo 公司成立消息 | News — Ascooo</title>
-  <meta name="description" content="Ascooo 最新消息與公告。">
+  <title>About — Ascooo</title>
+  <meta name="description" content="關於 Ascooo — Animation × Creation 的故事。">
   <meta property="og:image" content="https://ascooo.com/assets/img/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,11 @@
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/news.css">
+  <link rel="stylesheet" href="/assets/css/about.css">
   <script>document.documentElement.classList.add('i18n-loading');</script>
 </head>
 
-<body data-area="news">
+<body data-area="about">
   <div class="l-wrap">
 
     <!-- ======== Opening Animation ======== -->
@@ -82,12 +82,12 @@
             <ul class="l-nav__list">
               <li class="l-nav__list-item"><a data-nav-href="/" class="l-nav__link" data-menu-close><span
                     class="l-nav__link-text" data-i18n="nav.top">首頁</span></a></li>
+              <li class="l-nav__list-item"><a data-nav-href="/company" class="l-nav__link" data-menu-close><span
+                    class="l-nav__link-text" data-i18n="nav.company">公司</span></a></li>
               <li class="l-nav__list-item"><a data-nav-href="/works" class="l-nav__link" data-menu-close><span
                     class="l-nav__link-text" data-i18n="nav.works">作品</span></a></li>
               <li class="l-nav__list-item"><a data-nav-href="/about" class="l-nav__link" data-menu-close><span
                     class="l-nav__link-text" data-i18n="nav.about">關於</span></a></li>
-              <li class="l-nav__list-item"><a data-nav-href="/company" class="l-nav__link" data-menu-close><span
-                    class="l-nav__link-text" data-i18n="nav.company">公司</span></a></li>
               <li class="l-nav__list-item"><a data-nav-href="/news" class="l-nav__link" data-menu-close><span
                     class="l-nav__link-text" data-i18n="nav.news">最新消息</span></a></li>
               <li class="l-nav__list-item"><a data-nav-href="/contact" class="l-nav__link" data-menu-close><span
@@ -109,24 +109,59 @@
 
       <!-- Main -->
       <main class="l-main">
-        <article class="p-news-article">
-          <div class="p-news-article__container">
-            <header class="p-news-article__header js-reveal">
-              <div class="p-news-article__date">
-                <span>2026.05.15</span>
+        <section class="p-about-page">
+          <div class="p-about-page__container">
+            <div class="c-section-title">
+              <span class="c-section-title__bg" aria-hidden="true" data-i18n="about_page.title">About</span>
+              <h1 class="c-section-title__text" data-i18n="about_page.title">About</h1>
+              <p class="c-section-title__cap" data-i18n="about_page.cap">關於我們</p>
+            </div>
+
+            <div class="p-about-page__hero js-reveal-scale">
+              <div class="p-about-page__hero-bg" aria-hidden="true">Animation × Creation<br>= Ascooo</div>
+              <h2 class="p-about-page__hero-text">Animation × Creation<br>= Ascooo</h2>
+            </div>
+
+            <div class="p-about-page__body">
+              <div class="p-about-page__section js-reveal">
+                <h3 class="p-about-page__section-title">我們的故事</h3>
+                <p class="p-about-page__text" data-i18n="about.text">
+                  <strong>Ascooo</strong> 致力於將優質動畫與影視內容帶給觀眾。我們深信每一部作品都承載著創作者的靈魂，而我們的使命就是讓這些故事觸及更多人心。
+                </p>
               </div>
-              <h1 class="p-news-article__title">Ascooo 公司成立消息</h1>
-            </header>
-            <div class="p-news-article__content js-reveal">
-              <p>我們很高興地宣布，Ascooo 於今日正式成立。</p><p>我們致力於提供最優質的設計與開發服務，結合創新思維與專業技術，為客戶打造卓越的數位體驗。這是一個全新的開始，我們期待未來能與更多優秀的夥伴合作，共創佳績。</p>
-              <br>
-              <a href="/news.html" class="p-news-article__back">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                返回列表
-              </a>
+
+              <div class="p-about-page__section js-reveal">
+                <h3 class="p-about-page__section-title">我們的理念</h3>
+                <p class="p-about-page__text" data-i18n="purpose.text1">
+                  Ascooo 是一家專注於動畫與影視內容發行的公司。我們以優質的發行策略與創新的宣傳手法，為觀眾、創作者及合作夥伴搭建一座連結的橋樑。
+                </p>
+                <p class="p-about-page__text" data-i18n="purpose.text2">
+                  從全國性的大規模上映到特別放映會，我們運用最佳的發行策略，充分展現每部作品的價值與魅力，為更多觀眾帶來更精彩的影視體驗。
+                </p>
+              </div>
+
+              <div class="p-about-page__section js-reveal">
+                <h3 class="p-about-page__section-title">公司資訊</h3>
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.name_label">公司名稱</div>
+                  <div class="c-data-row__content" data-i18n="company.name_value">Ascooo Inc.</div>
+                </div>
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.business_label">事業內容</div>
+                  <div class="c-data-row__content" data-i18n="company.business_value">動畫與影視內容之發行、宣傳</div>
+                </div>
+                <div class="p-about-page__more">
+                  <a data-nav-href="/company" class="c-btn-more">
+                    <div class="c-btn-more__icon">
+                      <div class="c-btn-more__icon-arrow"></div>
+                    </div>
+                    <div class="c-btn-more__text" data-i18n="company.more">More</div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </article>
+        </section>
       </main>
 
       <!-- Footer -->

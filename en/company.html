@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/assets/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ascooo 公司成立消息 | News — Ascooo</title>
-  <meta name="description" content="Ascooo 最新消息與公告。">
+  <title>Company — Ascooo</title>
+  <meta name="description" content="Ascooo 公司資訊與聯絡方式。">
   <meta property="og:image" content="https://ascooo.com/assets/img/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,11 @@
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/news.css">
+  <link rel="stylesheet" href="/assets/css/company.css">
   <script>document.documentElement.classList.add('i18n-loading');</script>
 </head>
 
-<body data-area="news">
+<body data-area="company">
   <div class="l-wrap">
 
     <!-- ======== Opening Animation ======== -->
@@ -109,24 +109,70 @@
 
       <!-- Main -->
       <main class="l-main">
-        <article class="p-news-article">
-          <div class="p-news-article__container">
-            <header class="p-news-article__header js-reveal">
-              <div class="p-news-article__date">
-                <span>2026.05.15</span>
+        <section class="p-company-page">
+          <div class="p-company-page__container">
+            <div class="c-section-title">
+              <span class="c-section-title__bg" aria-hidden="true" data-i18n="company_page.title">Company</span>
+              <h1 class="c-section-title__text" data-i18n="company_page.title">Company</h1>
+              <p class="c-section-title__cap" data-i18n="company_page.cap">公司資訊</p>
+            </div>
+
+            <div class="p-company-page__hero js-reveal-scale">
+              <div class="p-company-page__hero-bg" aria-hidden="true">Ascooo Inc.</div>
+              <h2 class="p-company-page__hero-text">Ascooo Inc.</h2>
+            </div>
+
+            <div class="p-company-page__body">
+              <div class="p-company-page__section js-reveal">
+                <h3 class="p-company-page__section-title" data-i18n="company.title">公司資訊</h3>
+
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.name_label">公司名稱</div>
+                  <div class="c-data-row__content" data-i18n="company.name_value">Ascooo Inc.</div>
+                </div>
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.capital_label">資本額</div>
+                  <div class="c-data-row__content" data-i18n="company.capital_value">—</div>
+                </div>
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.representatives_label">代表人</div>
+                  <div class="c-data-row__content">
+                    <span data-i18n="company.representative1_name">—</span>
+                  </div>
+                </div>
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.location_label">所在地</div>
+                  <div class="c-data-row__content" data-i18n="company.location_value">—</div>
+                </div>
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.business_label">事業內容</div>
+                  <div class="c-data-row__content" data-i18n="company.business_value">—</div>
+                </div>
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.phone_label">電話</div>
+                  <div class="c-data-row__content" data-i18n="company.phone_value">02-1234-5678</div>
+                </div>
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.fax_label">傳真</div>
+                  <div class="c-data-row__content" data-i18n="company.fax_value">02-1234-5679</div>
+                </div>
+
+                <div class="c-data-row">
+                  <div class="c-data-row__header" data-i18n="company.map_label">地圖</div>
+                  <div class="c-data-row__content">
+                    <span data-i18n="company.map_value">查看 Google 地圖</span>
+                    <div class="p-company-page__map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7042578502577!2d121.5647572!3d25.0441097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da80a7ad%3A0xacc4d11dc963103c!2sTaipei%20101!5e0!3m2!1sen!2stw!4v1689150000000!5m2!1sen!2stw"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <h1 class="p-news-article__title">Ascooo 公司成立消息</h1>
-            </header>
-            <div class="p-news-article__content js-reveal">
-              <p>我們很高興地宣布，Ascooo 於今日正式成立。</p><p>我們致力於提供最優質的設計與開發服務，結合創新思維與專業技術，為客戶打造卓越的數位體驗。這是一個全新的開始，我們期待未來能與更多優秀的夥伴合作，共創佳績。</p>
-              <br>
-              <a href="/news.html" class="p-news-article__back">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                返回列表
-              </a>
             </div>
           </div>
-        </article>
+        </section>
       </main>
 
       <!-- Footer -->

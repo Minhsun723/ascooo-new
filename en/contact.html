@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/assets/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ascooo 公司成立消息 | News — Ascooo</title>
-  <meta name="description" content="Ascooo 最新消息與公告。">
+  <title>Contact — Ascooo</title>
+  <meta name="description" content="聯絡 Ascooo — 歡迎與我們聯繫。">
   <meta property="og:image" content="https://ascooo.com/assets/img/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,11 @@
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/news.css">
+  <link rel="stylesheet" href="/assets/css/contact.css">
   <script>document.documentElement.classList.add('i18n-loading');</script>
 </head>
 
-<body data-area="news">
+<body data-area="contact">
   <div class="l-wrap">
 
     <!-- ======== Opening Animation ======== -->
@@ -109,24 +109,37 @@
 
       <!-- Main -->
       <main class="l-main">
-        <article class="p-news-article">
-          <div class="p-news-article__container">
-            <header class="p-news-article__header js-reveal">
-              <div class="p-news-article__date">
-                <span>2026.05.15</span>
-              </div>
-              <h1 class="p-news-article__title">Ascooo 公司成立消息</h1>
-            </header>
-            <div class="p-news-article__content js-reveal">
-              <p>我們很高興地宣布，Ascooo 於今日正式成立。</p><p>我們致力於提供最優質的設計與開發服務，結合創新思維與專業技術，為客戶打造卓越的數位體驗。這是一個全新的開始，我們期待未來能與更多優秀的夥伴合作，共創佳績。</p>
-              <br>
-              <a href="/news.html" class="p-news-article__back">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                返回列表
-              </a>
+        <section class="p-contact">
+          <div class="p-contact__container">
+            <div class="c-section-title">
+              <span class="c-section-title__bg" aria-hidden="true" data-i18n="contact_page.title">Contact</span>
+              <h1 class="c-section-title__text" data-i18n="contact_page.title">Contact</h1>
+              <p class="c-section-title__cap" data-i18n="contact_page.cap">聯絡我們</p>
+            </div>
+
+            <div class="p-contact__form js-reveal">
+              <form id="contact-form">
+                <div class="c-form-group">
+                  <label class="c-form-label" for="contact-name" data-i18n="contact_page.name_label">姓名</label>
+                  <input class="c-form-input" type="text" id="contact-name" name="name" required>
+                </div>
+                <div class="c-form-group">
+                  <label class="c-form-label" for="contact-email" data-i18n="contact_page.email_label">Email</label>
+                  <input class="c-form-input" type="email" id="contact-email" name="email" required>
+                </div>
+                <div class="c-form-group">
+                  <label class="c-form-label" for="contact-subject" data-i18n="contact_page.subject_label">主旨</label>
+                  <input class="c-form-input" type="text" id="contact-subject" name="subject" required>
+                </div>
+                <div class="c-form-group">
+                  <label class="c-form-label" for="contact-message" data-i18n="contact_page.message_label">訊息</label>
+                  <textarea class="c-form-textarea" id="contact-message" name="message" required></textarea>
+                </div>
+                <button class="c-form-submit" type="submit" data-i18n="contact_page.submit">送出</button>
+              </form>
             </div>
           </div>
-        </article>
+        </section>
       </main>
 
       <!-- Footer -->

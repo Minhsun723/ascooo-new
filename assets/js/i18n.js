@@ -1,29 +1,32 @@
 /**
  * ASCOOO — i18n Module
- * Simple bilingual switch (zh-TW / en)
+ * Language is determined purely by URL path (/en/* = English, else zh-TW).
+ * nav links use [data-nav-href] and are resolved at runtime via url().
+ * Language toggle uses [data-lang-link] anchors with href set by this module.
  */
 
 const I18n = (() => {
-  // Check URL parameter first
   const pathname = window.location.pathname;
-  const isEnPath = pathname.startsWith('/en/') || pathname === '/en';
-  
-  if (isEnPath) {
-    localStorage.setItem('ascooo-lang', 'en');
-  } else {
-    // To allow switching back to Chinese via URL if needed, though they only said /en
-    // We only force 'en' if we see /en in the URL.
-  }
-  
-  let currentLang = localStorage.getItem('ascooo-lang') || 'zh-TW';
-  
-  // Ensure URL reflects current language on load
-  if (currentLang === 'en' && !isEnPath) {
-    const newPath = '/en' + (pathname.startsWith('/') ? pathname : '/' + pathname);
-    window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
-  } else if (currentLang === 'zh-TW' && isEnPath) {
-    const newPath = pathname.replace(/^\/en(\/|$)/, '/');
-    window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
+  const isEn = pathname.startsWith('/en/') || pathname === '/en';
+  const currentLang = isEn ? 'en' : 'zh-TW';
+
+  // Paths that are shared between languages (no /en/ copies)
+  const SHARED_PREFIXES = ['/works/', '/news/'];
+  const isSharedPath = SHARED_PREFIXES.some(p => pathname.startsWith(p));
+
+  /**
+   * url(path) — prepend /en prefix when on an English page.
+   * path should start with '/', e.g. '/about', '/', '/contact'
+   */
+  function url(path) {
+    // Shared sub-pages (works/news detail) never get /en prefix
+    const sharedPrefixes = ['/works/', '/news/'];
+    if (sharedPrefixes.some(p => path.startsWith(p))) return path;
+    if (isEn) {
+      // '/' -> '/en', '/about' -> '/en/about'
+      return path === '/' ? '/en' : `/en${path}`;
+    }
+    return path;
   }
 
   let translations = {};
@@ -46,11 +49,11 @@ const I18n = (() => {
     const data = translations[currentLang];
     if (!data) return;
 
+    // Apply text / HTML translations
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       const value = getNestedValue(data, key);
       if (value !== null) {
-        // Support HTML content (for <strong> etc.)
         if (value.includes('<')) {
           el.innerHTML = value.replace(/\n/g, '<br>');
         } else {
@@ -59,62 +62,58 @@ const I18n = (() => {
       }
     });
 
-    // Update placeholder attributes
+    // Apply placeholder translations
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
       const value = getNestedValue(data, key);
-      if (value !== null) {
-        el.setAttribute('placeholder', value);
-      }
-    });
-
-    // Update lang buttons
-    document.querySelectorAll('[data-lang-btn]').forEach(btn => {
-      btn.classList.toggle('is-active', btn.getAttribute('data-lang-btn') === currentLang);
+      if (value !== null) el.setAttribute('placeholder', value);
     });
 
     // Update html lang attribute
-    document.documentElement.lang = currentLang === 'zh-TW' ? 'zh-TW' : 'en';
+    document.documentElement.lang = currentLang;
+  }
+
+  function applyNavHrefs() {
+    // Resolve all [data-nav-href] links using url() helper
+    document.querySelectorAll('[data-nav-href]').forEach(el => {
+      el.setAttribute('href', url(el.getAttribute('data-nav-href')));
+    });
+  }
+
+  function applyLangLinks() {
+    // Set href and is-active on language switcher anchors
+    document.querySelectorAll('[data-lang-link]').forEach(btn => {
+      const lang = btn.getAttribute('data-lang-link');
+
+      if (isSharedPath) {
+        // On shared pages (works/news sub-pages), no EN version exists—go to homepage
+        btn.setAttribute('href', lang === 'en' ? '/en' : '/');
+        // These pages are always zh-TW
+        btn.classList.toggle('is-active', lang === 'zh-TW');
+      } else if (lang === 'en') {
+        // Strip /en prefix from current path to get the equivalent page path
+        const basePath = pathname.replace(/^\/en(\/|$)/, '/');
+        btn.setAttribute('href', `/en${basePath === '/' ? '' : basePath}`);
+        btn.classList.toggle('is-active', lang === currentLang);
+      } else {
+        // zh-TW: strip /en prefix
+        const basePath = pathname.replace(/^\/en(\/|$)/, '/');
+        btn.setAttribute('href', basePath || '/');
+        btn.classList.toggle('is-active', lang === currentLang);
+      }
+    });
   }
 
   async function init() {
     try {
-      // Preload both languages
-      await Promise.all([loadLang('zh-TW'), loadLang('en')]);
+      await loadLang(currentLang);
       applyTranslations();
-
-      // Bind language switch buttons
-      document.querySelectorAll('[data-lang-btn]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const lang = btn.getAttribute('data-lang-btn');
-          switchLang(lang);
-        });
-      });
-
-      // Remove loading state
+      applyNavHrefs();
+      applyLangLinks();
       document.documentElement.classList.remove('i18n-loading');
     } catch (error) {
-      console.error('Failed to load language', error);
+      console.error('[i18n] Failed to initialize:', error);
       document.documentElement.classList.remove('i18n-loading');
-    }
-  }
-
-  function switchLang(lang) {
-    if (lang === currentLang) return;
-    currentLang = lang;
-    localStorage.setItem('ascooo-lang', lang);
-    applyTranslations();
-    
-    // Update URL
-    const pathname = window.location.pathname;
-    const isEnPath = pathname.startsWith('/en/') || pathname === '/en';
-    
-    if (lang === 'en' && !isEnPath) {
-      const newPath = '/en' + (pathname.startsWith('/') ? pathname : '/' + pathname);
-      window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
-    } else if (lang === 'zh-TW' && isEnPath) {
-      const newPath = pathname.replace(/^\/en(\/|$)/, '/');
-      window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
     }
   }
 
@@ -122,5 +121,5 @@ const I18n = (() => {
     return currentLang;
   }
 
-  return { init, switchLang, getLang };
+  return { init, url, getLang };
 })();

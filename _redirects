@@ -1,2 +1,4 @@
-/en/*  /:splat  200
-/en    /        200
+# works and news sub-pages are shared (no EN copies)
+# Redirect /en/works/* and /en/news/* back to the shared pages
+/en/works/* /works/:splat 301
+/en/news/* /news/:splat 301

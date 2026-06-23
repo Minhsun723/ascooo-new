@@ -59,63 +59,60 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Intercept Link Clicks for Exit Animation
-    const links = document.querySelectorAll('a[href]');
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        const target = link.getAttribute('target');
-        
-        // Ignore links that shouldn't trigger transition:
-        // Hash links, external links, target="_blank", mailto:, tel:
-        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || target === '_blank') return;
-        
-        // Check if internal link
-        const currentDomain = window.location.hostname;
-        const linkDomain = new URL(link.href, window.location.href).hostname;
-        
+    // Intercept Link Clicks for Exit Animation (event delegation)
+    // Works with both static href and data-nav-href set asynchronously by i18n.js
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (!link) return;
+
+      // Resolve href: prefer the actual href (set by i18n), fallback to data-nav-href
+      const href = link.getAttribute('href') || link.getAttribute('data-nav-href');
+      const target = link.getAttribute('target');
+
+      // Ignore: no href, hash-only, external protocols, new-tab
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || target === '_blank') return;
+
+      // Ignore external domains
+      const currentDomain = window.location.hostname;
+      try {
+        const linkDomain = new URL(href, window.location.href).hostname;
         if (currentDomain !== linkDomain) return;
+      } catch { return; }
 
-        // Check if clicking link to the exact same page (e.g. Logo on Home)
-        const currentPath = window.location.pathname;
-        const linkPath = new URL(link.href, window.location.href).pathname;
-        const normalizePath = (p) => p.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
-        
-        if (normalizePath(currentPath) === normalizePath(linkPath) && !link.search && !link.hash) {
-          e.preventDefault();
-          // Scroll to top smoothly if on same page
-          if (typeof lenis !== 'undefined' && lenis) {
-            lenis.scrollTo(0);
-          } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-          return;
-        }
+      // Ignore same-page clicks
+      const currentPath = window.location.pathname;
+      const linkPath = new URL(href, window.location.href).pathname;
+      const normalizePath = (p) => p.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
 
-        // Ignore if just empty hash or similar
-        if (href === '#' || href === '') return;
-
+      if (normalizePath(currentPath) === normalizePath(linkPath)) {
         e.preventDefault();
-        
-        // Ensure opEl is visible and on top
-        opEl.style.display = 'block';
-        opEl.style.pointerEvents = 'all';
-        gsap.set('.p-op__logo', { display: 'none' });
+        if (typeof lenis !== 'undefined' && lenis) {
+          lenis.scrollTo(0);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        return;
+      }
 
-        // Animate overlays down to cover the screen (coming from bottom)
-        gsap.fromTo('.p-op__overlay', 
-          { yPercent: 100 }, 
-          { 
-            yPercent: 0, 
-            duration: 0.3, 
-            ease: 'power2.inOut', 
-            stagger: 0.03,
-            onComplete: () => {
-              window.location.href = href;
-            }
+      if (href === '#' || href === '') return;
+
+      e.preventDefault();
+      opEl.style.display = 'block';
+      opEl.style.pointerEvents = 'all';
+      gsap.set('.p-op__logo', { display: 'none' });
+
+      gsap.fromTo('.p-op__overlay',
+        { yPercent: 100 },
+        {
+          yPercent: 0,
+          duration: 0.3,
+          ease: 'power2.inOut',
+          stagger: 0.03,
+          onComplete: () => {
+            window.location.href = href;
           }
-        );
-      });
+        }
+      );
     });
   }
 
