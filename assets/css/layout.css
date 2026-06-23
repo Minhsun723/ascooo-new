@@ -779,22 +779,22 @@
   }
 }
 
-/* ---- Dark Mode: Logo Switch ---- */
-
-@media (prefers-color-scheme: dark) {
-
-  /* Header logo */
-  .l-header__brand-link img[src*="logo_dark"] {
-    content: url("/assets/img/logo_light.svg");
-  }
-
-  /* Footer logo */
-  .l-footer__logo img[src*="logo_dark"] {
-    content: url("/assets/img/logo_light.svg");
-  }
-
-  /* Marquee logos (index.html) */
-  .p-marquee__item img[src*="logo_dark"] {
-    content: url("/assets/img/logo_light.svg");
-  }
+/* ---- Dark Mode: Logo Switch (Dark Reader compatible) ----
+ * Dark Reader uses CSS filters on the entire page and does NOT trigger
+ * prefers-color-scheme. It applies its own dark mode via injected CSS.
+ * We add [data-darkreader-inline-bgcolor] / darkreader class detection
+ * is unreliable, so we let Dark Reader invert the page naturally and
+ * use CSS to keep logos correct.
+ *
+ * The logo imgs have data-darkreader-ignore so Dark Reader won't
+ * re-invert them. Combined with filter:invert(1) on our side,
+ * the dark logo appears white on dark backgrounds.
+ *
+ * Dark Reader adds class to <html> or injects a style tag — we
+ * detect its presence via [data-darkreader-scheme="dark"] on <html>.
+ * ---- */
+html[data-darkreader-scheme="dark"] .l-header__brand-link img,
+html[data-darkreader-scheme="dark"] .l-footer__logo img,
+html[data-darkreader-scheme="dark"] .p-marquee__item img {
+  filter: invert(1) !important;
 }
