@@ -137,25 +137,59 @@
 .p-hero__pagination {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .p-hero__pagination .swiper-pagination-bullet {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 6px;
   height: 6px;
   background-color: var(--color-text);
   border-radius: 50%;
   opacity: 0.2;
-  transition: opacity 0.4s ease, transform 0.4s ease, width 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   margin: 0 !important;
+  overflow: visible;
 }
 
 .p-hero__pagination .swiper-pagination-bullet-active {
   opacity: 1;
   background-color: var(--color-text);
-  width: 6px;
-  transform: scale(1.5);
+}
+
+@property --hero-ring {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+.p-hero__pagination .swiper-pagination-bullet::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
+  background: conic-gradient(var(--color-text) var(--hero-ring, 0%), transparent 0);
+  -webkit-mask: radial-gradient(transparent 7px, black 7.5px);
+  mask: radial-gradient(transparent 7px, black 7.5px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.p-hero__pagination .swiper-pagination-bullet-active::before {
+  opacity: 1;
+  animation: hero-ring-anim 4s linear forwards;
+}
+
+@keyframes hero-ring-anim {
+  0% { --hero-ring: 0%; }
+  100% { --hero-ring: 100%; }
 }
 
 /* ---- Line Up Section ---- */

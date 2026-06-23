@@ -27,11 +27,7 @@
   }
 }
 
-@media (max-width: 480px) {
-  .p-works__grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 .p-works-article {
   padding-top: 140px;

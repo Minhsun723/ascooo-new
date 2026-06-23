@@ -437,7 +437,7 @@
 }
 
 .l-nav__list-item {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .l-nav__link {

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navigation: {
         prevEl: '.p-hero__slide-btn.--prev',
         nextEl: '.p-hero__slide-btn.--next',
-      },
+      }
     });
   }
 
