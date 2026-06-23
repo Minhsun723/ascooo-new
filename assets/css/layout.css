@@ -778,3 +778,23 @@
     margin-top: 40px;
   }
 }
+
+/* ---- Dark Mode: Logo Switch ---- */
+
+@media (prefers-color-scheme: dark) {
+
+  /* Header logo */
+  .l-header__brand-link img[src*="logo_dark"] {
+    content: url("/assets/img/logo_light.svg");
+  }
+
+  /* Footer logo */
+  .l-footer__logo img[src*="logo_dark"] {
+    content: url("/assets/img/logo_light.svg");
+  }
+
+  /* Marquee logos (index.html) */
+  .p-marquee__item img[src*="logo_dark"] {
+    content: url("/assets/img/logo_light.svg");
+  }
+}
