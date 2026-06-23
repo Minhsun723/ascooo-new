@@ -601,6 +601,13 @@
   margin-bottom: 40px;
 }
 
+.l-footer__support-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
 .l-footer__support-list {
   display: flex;
   gap: 32px;
@@ -752,6 +759,11 @@
     height: 36px;
     top: 12px;
     right: 24px;
+  }
+
+  .l-footer__support-inner {
+    flex-direction: column;
+    gap: 16px;
   }
 
   .l-footer__support-list {

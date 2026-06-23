@@ -54,6 +54,8 @@
   "footer": {
     "contact": "Contact",
     "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "about": "About",
     "copyright": "© 2026 Ascooo. All rights reserved."
   },
   "works_page": {
@@ -84,6 +86,24 @@
   "privacy_page": {
     "title": "Privacy Policy",
     "cap": "Privacy Policy"
+  },
+  "terms_page": {
+    "title": "Terms of Service",
+    "cap": "Terms of Service",
+    "section1_title": "Scope of Application",
+    "section1_text": "These Terms of Service (hereinafter \"Terms\") apply to the website and related services provided by Ascooo Inc. (hereinafter \"the Company\"). By accessing or using this website or service, you agree to be bound by all provisions of these Terms.",
+    "section2_title": "Service Description",
+    "section2_text": "The Company provides information, distribution, and promotional services related to animation and visual content. The Company reserves the right to modify, suspend, or terminate all or part of the services at any time without prior notice.",
+    "section3_title": "User Obligations",
+    "section3_text": "Users may not use this website or service for any unlawful or unauthorized purpose, including but not limited to: distributing malware, infringing upon the intellectual property rights of others, sending unsolicited commercial messages, or engaging in any conduct that disrupts the normal operation of the service.",
+    "section4_title": "Intellectual Property",
+    "section4_text": "All content on this website, including text, images, video, trademarks, and logos, is the property of the Company or its licensors and is protected by copyright and other intellectual property laws. No content may be reproduced, distributed, modified, or publicly displayed without the prior written consent of the Company.",
+    "section5_title": "Disclaimer",
+    "section5_text": "The Company will make every effort to ensure the accuracy and timeliness of website content, but makes no warranties regarding the completeness, accuracy, or suitability of any content. The Company shall not be liable for any loss arising from the use of this website or reliance on its content.",
+    "section6_title": "Amendments",
+    "section6_text": "The Company may amend these Terms at any time. Amended Terms will be posted on this page and will take effect from the date of publication. Please review this page periodically for the latest Terms. Continued use of the service constitutes acceptance of the amended Terms.",
+    "section7_title": "Contact",
+    "section7_text": "If you have any questions regarding these Terms, please reach us via our <a href=\"/contact.html\" style=\"text-decoration: underline;\">contact page</a>."
   },
   "not_found": {
     "title": "404",

@@ -54,6 +54,8 @@
   "footer": {
     "contact": "Contact",
     "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "about": "About",
     "copyright": "© 2026 Ascooo. All rights reserved."
   },
   "works_page": {
@@ -84,6 +86,24 @@
   "privacy_page": {
     "title": "Privacy Policy",
     "cap": "隱私權政策"
+  },
+  "terms_page": {
+    "title": "Terms of Service",
+    "cap": "使用者條款",
+    "section1_title": "適用範圍",
+    "section1_text": "本使用者條款（以下簡稱「本條款」）適用於 Ascooo Inc.（以下簡稱「本公司」）所提供之網站及相關服務。使用本網站或服務，即表示您同意遵守本條款之所有規定。",
+    "section2_title": "服務內容",
+    "section2_text": "本公司提供動畫及影視內容相關之資訊、發行及推廣服務。本公司保留隨時變更、暫停或終止全部或部分服務之權利，且毋須事先通知。",
+    "section3_title": "使用者義務",
+    "section3_text": "使用者不得將本網站或服務用於任何違法或未經授權之目的，包含但不限於：散布惡意軟體、侵害他人智慧財產權、發送未經請求之商業訊息，或從事任何足以妨礙服務正常運作之行為。",
+    "section4_title": "智慧財產權",
+    "section4_text": "本網站之所有內容，包含文字、圖像、影像、商標及標誌等，均為本公司或其授權人之財產，受著作權及其他智慧財產權法律保護。未經本公司書面許可，不得擅自重製、散布、修改或公開展示任何內容。",
+    "section5_title": "免責聲明",
+    "section5_text": "本公司將盡力確保網站內容之正確性與即時性，但不對任何內容之完整性、準確性或適用性提供擔保。因使用本網站或依賴其內容所產生之任何損失，本公司不承擔任何責任。",
+    "section6_title": "條款修訂",
+    "section6_text": "本公司得隨時修訂本條款，修訂後之條款將公布於本頁面，並自公布之日起生效。請您定期查閱本頁面以了解最新條款內容。繼續使用本服務即視為您同意接受修訂後之條款。",
+    "section7_title": "聯絡方式",
+    "section7_text": "如對本條款有任何疑問，請透過<a href=\"/contact.html\" style=\"text-decoration: underline;\">聯絡我們</a>頁面與我們聯繫。"
   },
   "not_found": {
     "title": "404",
