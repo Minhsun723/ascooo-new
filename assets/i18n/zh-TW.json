@@ -103,7 +103,7 @@
     "section6_title": "條款修訂",
     "section6_text": "本公司得隨時修訂本條款，修訂後之條款將公布於本頁面，並自公布之日起生效。請您定期查閱本頁面以了解最新條款內容。繼續使用本服務即視為您同意接受修訂後之條款。",
     "section7_title": "聯絡方式",
-    "section7_text": "如對本條款有任何疑問，請透過<a href=\"/contact\" style=\"text-decoration: underline;\">聯絡我們</a>頁面與我們聯繫。"
+    "section7_text": "如對本條款有任何疑問，請透過<a data-nav-href=\"/contact\" style=\"text-decoration: underline;\">聯絡我們</a>頁面與我們聯繫。"
   },
   "not_found": {
     "title": "404",

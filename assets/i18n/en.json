@@ -103,7 +103,7 @@
     "section6_title": "Amendments",
     "section6_text": "The Company may amend these Terms at any time. Amended Terms will be posted on this page and will take effect from the date of publication. Please review this page periodically for the latest Terms. Continued use of the service constitutes acceptance of the amended Terms.",
     "section7_title": "Contact",
-    "section7_text": "If you have any questions regarding these Terms, please reach us via our <a href=\"/contact\" style=\"text-decoration: underline;\">contact page</a>."
+    "section7_text": "If you have any questions regarding these Terms, please reach us via our <a data-nav-href=\"/contact\" style=\"text-decoration: underline;\">contact page</a>."
   },
   "not_found": {
     "title": "404",
